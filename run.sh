@@ -14,7 +14,8 @@ docker run \
 	--device-cgroup-rule='c 189:* rmw' \
 	--privileged \
 	-v .:/workspace \
-	realsense_record /bin/bash
+	realsense_record /bin/bash -c 'ros2 launch realsense2_camera rs_launch.py   rgb_camera.profile:=640x480x30   depth_module.profile:=640x480x30 enable_infra1:=true enable_infra2:=true depth_module.emitter_enabled:=false depth_module.enable:=true'
+
 
 
 #ros2 launch realsense2_camera rs_launch.py   rgb_camera.profile:=640x480x30   depth_module.profile:=640x480x30 enable_infra1:=true enable_infra2:=true depth_module.emitter_enabled:=false depth_module.enable:=true
