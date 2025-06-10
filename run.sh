@@ -1,4 +1,5 @@
-docker build -t realsense_record .
+docker image inspect realsense_record >/dev/null 2>&1 || docker build -t realsense_record .
+
 
 docker rm -f realsense_record
 docker run \
