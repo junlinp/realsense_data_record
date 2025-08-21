@@ -44,6 +44,5 @@ RUN mkdir -p ros2_ws/src \
     && colcon build
 RUN echo "source /3rdparty/ros2_ws/install/local_setup.bash" >> ~/.bashrc
 
-CMD ["bash"]
-
-
+COPY record.sh /record.sh
+COPY start_sensor.sh /start_sensor.sh
